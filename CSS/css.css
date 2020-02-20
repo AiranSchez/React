@@ -3,6 +3,7 @@ body {
 }
 
 .container {
+  margin-top: 50px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 3fr 1fr;
@@ -11,7 +12,6 @@ body {
       grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 25px;
   grid-row-gap: 7px;
-  height: 700px;
 }
 
 .container .PersonajesIzquierda,
@@ -21,14 +21,13 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1 / 1 / 6 / 2;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: (1fr)[5];
-      grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .container .PersonajesIzquierda div,
@@ -38,36 +37,43 @@ body {
   border-radius: 5px;
 }
 
-.container .PersonajesIzquierda .div1,
-.container .PersonajesDerecha .div1 {
+.container .PersonajesIzquierda [class^="personaje"],
+.container .PersonajesDerecha [class^="personaje"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 10px;
+  padding: 20px;
+  color: white;
+}
+
+.container .PersonajesIzquierda [class^="personaje"] img,
+.container .PersonajesDerecha [class^="personaje"] img {
+  width: 100px;
+  height: 100px;
+}
+
+.container .PersonajesIzquierda .personaje1,
+.container .PersonajesDerecha .personaje1 {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1 / 1 / 2 / 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
-.container .PersonajesIzquierda .div1 img,
-.container .PersonajesDerecha .div1 img {
-  width: 100px;
-  height: 100px;
-}
-
-.container .PersonajesIzquierda .div2,
-.container .PersonajesDerecha .div2 {
+.container .PersonajesIzquierda .personaje2,
+.container .PersonajesDerecha .personaje2 {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -75,8 +81,8 @@ body {
   grid-area: 2 / 1 / 3 / 2;
 }
 
-.container .PersonajesIzquierda .div3,
-.container .PersonajesDerecha .div3 {
+.container .PersonajesIzquierda .personaje3,
+.container .PersonajesDerecha .personaje3 {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -84,8 +90,8 @@ body {
   grid-area: 3 / 1 / 4 / 2;
 }
 
-.container .PersonajesIzquierda .div4,
-.container .PersonajesDerecha .div4 {
+.container .PersonajesIzquierda .personaje4,
+.container .PersonajesDerecha .personaje4 {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -93,8 +99,8 @@ body {
   grid-area: 4 / 1 / 5 / 2;
 }
 
-.container .PersonajesIzquierda .div5,
-.container .PersonajesDerecha .div5 {
+.container .PersonajesIzquierda .personaje5,
+.container .PersonajesDerecha .personaje5 {
   -ms-grid-row: 5;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -108,6 +114,22 @@ body {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-area: 1 / 3 / 6 / 4;
+}
+
+.container .PersonajesDerecha [class^="personaje"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .container .Buscador {
