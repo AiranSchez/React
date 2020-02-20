@@ -1,5 +1,9 @@
+@mixin borders {
+  border: 3px solid rgb(3, 67, 92);
+  border-radius: 5px;
+}
 body {
-  background-color: red;
+  background-image: url("../images/nashor.jpg");
 }
 .container {
   display: grid;
@@ -7,10 +11,11 @@ body {
   grid-template-rows: repeat(6, 1fr);
   grid-column-gap: 25px;
   grid-row-gap: 7px;
-  background-color: lightblue;
+
   height: 700px;
 
-  .PersonajesIzquierda {
+  .PersonajesIzquierda,
+  .PersonajesDerecha {
     grid-area: 1 / 1 / 6 / 2;
 
     display: grid;
@@ -18,8 +23,9 @@ body {
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 15px;
-    div{
-      background-color: brown;
+    div {
+      background-color: rgb(9, 20, 26);
+      @include borders();
     }
     .div1 {
       grid-area: 1 / 1 / 2 / 2;
@@ -27,7 +33,7 @@ body {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      img{
+      img {
         width: 100px;
         height: 100px;
       }
@@ -44,19 +50,34 @@ body {
     .div5 {
       grid-area: 5 / 1 / 6 / 2;
     }
-    background-color: grey;
   }
   .PersonajesDerecha {
     grid-area: 1 / 3 / 6 / 4;
-    background-color: grey;
   }
   .Buscador {
     grid-area: 1 / 2 / 2 / 3;
     background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    input{  
+      background: radial-gradient(ellipse at center, rgba(65, 86, 99, 1) 0%, rgba(17, 36, 43, 1) 100%);
+      padding: 0;
+      border: none;
+      color: white;
+      height: 35px;
+    }
+    div {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
   }
   .Campeones {
     grid-area: 2 / 2 / 6 / 3;
-    background-color: yellowgreen;
+    background-color: rgb(17, 35, 47);
+    @include borders();
   }
   .BansIzquierda {
     grid-area: 6 / 1 / 7 / 2;
