@@ -1,0 +1,73 @@
+body {
+  background-color: red;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 25px;
+  grid-row-gap: 7px;
+  background-color: lightblue;
+  height: 700px;
+
+  .PersonajesIzquierda {
+    grid-area: 1 / 1 / 6 / 2;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 15px;
+    div{
+      background-color: brown;
+    }
+    .div1 {
+      grid-area: 1 / 1 / 2 / 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      img{
+        width: 100px;
+        height: 100px;
+      }
+    }
+    .div2 {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+    .div3 {
+      grid-area: 3 / 1 / 4 / 2;
+    }
+    .div4 {
+      grid-area: 4 / 1 / 5 / 2;
+    }
+    .div5 {
+      grid-area: 5 / 1 / 6 / 2;
+    }
+    background-color: grey;
+  }
+  .PersonajesDerecha {
+    grid-area: 1 / 3 / 6 / 4;
+    background-color: grey;
+  }
+  .Buscador {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: white;
+  }
+  .Campeones {
+    grid-area: 2 / 2 / 6 / 3;
+    background-color: yellowgreen;
+  }
+  .BansIzquierda {
+    grid-area: 6 / 1 / 7 / 2;
+    background-color: black;
+  }
+  .Chat {
+    grid-area: 6 / 2 / 7 / 3;
+    background-color: blue;
+  }
+  .BansDerecha {
+    grid-area: 6 / 3 / 7 / 4;
+    background-color: black;
+  }
+}
