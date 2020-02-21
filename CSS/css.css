@@ -1,8 +1,11 @@
 body {
   background-image: url("../images/nashor.jpg");
+  background-size: cover;
 }
 
 .container {
+  margin-left: 150px;
+  margin-right: 150px;
   margin-top: 50px;
   display: -ms-grid;
   display: grid;
@@ -30,15 +33,8 @@ body {
           flex-direction: column;
 }
 
-.container .PersonajesIzquierda div,
-.container .PersonajesDerecha div {
-  background-color: #09141a;
-  border: 3px solid #03435c;
-  border-radius: 5px;
-}
-
-.container .PersonajesIzquierda [class^="personaje"],
-.container .PersonajesDerecha [class^="personaje"] {
+.container .PersonajesIzquierda [class^="personaje"] div,
+.container .PersonajesDerecha [class^="personaje"] div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,13 +48,20 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  border: 3px solid #03435c;
+  border-radius: 5px;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 250px;
   margin-bottom: 10px;
+  background-color: #09141a;
   padding: 20px;
   color: white;
 }
 
-.container .PersonajesIzquierda [class^="personaje"] img,
-.container .PersonajesDerecha [class^="personaje"] img {
+.container .PersonajesIzquierda [class^="personaje"] div img,
+.container .PersonajesDerecha [class^="personaje"] div img {
   width: 100px;
   height: 100px;
 }
@@ -172,6 +175,9 @@ body {
   background-color: #11232f;
   border: 3px solid #03435c;
   border-radius: 5px;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .container .BansIzquierda {

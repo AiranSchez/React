@@ -1,6 +1,9 @@
 @mixin borders {
   border: 3px solid rgb(3, 67, 92);
   border-radius: 5px;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 @mixin flex {
   display: flex;
@@ -14,8 +17,11 @@
 }
 body {
   background-image: url("../images/nashor.jpg");
+  background-size: cover;
 }
 .container {
+  margin-left: 150px;
+  margin-right: 150px;
   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
@@ -30,17 +36,16 @@ body {
     display: flex;
     flex-direction: column;
 
-    div{
-      background-color: rgb(9, 20, 26);
-      @include borders();
-    }
-    [class^="personaje"] {
+    
+    [class^="personaje"] div {
       @include flex();
+      @include borders();
+      width: 250px;
       img {
         @include tamanio();
       }
       margin-bottom: 10px;
-      
+      background-color: rgb(9, 20, 26);
       padding: 20px;
       color: white
     }
