@@ -34,7 +34,7 @@ body {
       background-color: rgb(9, 20, 26);
       @include borders();
     }
-    [class^="personaje"] {
+    [class^="personaje"] div{
       @include flex();
       img {
         @include tamanio();
@@ -62,7 +62,7 @@ body {
   }
   .PersonajesDerecha {
     grid-area: 1 / 3 / 6 / 4;
-    [class^="personaje"] {
+    [class^="personaje"] div{
       @include flex();
     }
   }

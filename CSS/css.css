@@ -37,8 +37,8 @@ body {
   border-radius: 5px;
 }
 
-.container .PersonajesIzquierda [class^="personaje"],
-.container .PersonajesDerecha [class^="personaje"] {
+.container .PersonajesIzquierda [class^="personaje"] div,
+.container .PersonajesDerecha [class^="personaje"] div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,8 +57,8 @@ body {
   color: white;
 }
 
-.container .PersonajesIzquierda [class^="personaje"] img,
-.container .PersonajesDerecha [class^="personaje"] img {
+.container .PersonajesIzquierda [class^="personaje"] div img,
+.container .PersonajesDerecha [class^="personaje"] div img {
   width: 100px;
   height: 100px;
 }
@@ -116,7 +116,7 @@ body {
   grid-area: 1 / 3 / 6 / 4;
 }
 
-.container .PersonajesDerecha [class^="personaje"] {
+.container .PersonajesDerecha [class^="personaje"] div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
