@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="62" height="62" style=""><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none" class="" style=""/>
+
+ <g style="">
+  <title>riot logo</title>
+  <rect fill="none" id="canvas_background" height="64" width="64" y="-1" x="-1"/>
+ </g>
+ <g style="" class="currentLayer">
+  <title>Layer 1</title>
+  <circle id="svg_1" fill="#D13639" r="30" cy="30.799217224121094" cx="30.799270629882812" class=""/>
+  <path id="svg_2" fill="white" d="m29.558305,46.471995l-1.6,-4.1l15.4,0.8l-0.7,6.6l-13.1,-3.3zm3.7,-31.7l-21.5,10.2l3.3,15.3l4.4,0l-0.7,-11l0.6,-0.2l2.7,11.2l4.5,0l-0.1,-13.4l0.6,-0.2l2.3,13.6l4.9,0l1.1,-16.1l0.7,-0.3l1.2,16.4l6.3,0l2.3,-22.4"/>
+ </g>
+</svg>

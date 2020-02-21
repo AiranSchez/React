@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'lol1';
+    src: url(/fonts/lolfont1.woff2) format('woff2');
+}
+
+body {
+    background-image: url("../images/login-back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;
+    height: 100%;
+}
+
+header {
+    padding: 5px;
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    padding: 5px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    padding: 5px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*--------------- Header ---------------*/
+
+/* -- LOGO --*/
+
+#riot-logo {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#riot-logo-img {
+    height: 60px;
+}
+
+/*--------------- Footer ---------------*/
+
+#footer-div {
+    padding-left: 10px;
+    margin-top: 150px;
+    align-self: flex-end;
+}
+
+.copyright {
+    font-style: normal;
+    font-family: 'lol1', sans-serif;
+    color: rgba(245, 245, 245, 0.932);
+    text-align: left;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 130%;
+    font-size: 8.19px;
+}
+
+.footer-link {
+    font-family: 'lol1', sans-serif;
+    text-align: left;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 110%;
+    color: rgba(249, 249, 249, 0.65);
+    vertical-align: middle;
+    font-size: 10.24px;
+}
+
+.footer-dot {
+    font-family: 'lol1', sans-serif;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 110%;
+    box-sizing: border-box;
+    font-size: 170%;
+    padding: 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*--------------- Formulario ---------------*/
+
+/* -- BOTON -- */
+
+#login-button {
+    box-sizing: border-box;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.24rem;
+    font-weight: 50;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 27%;
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 2px solid #e8e8e8;
+    background-color: transparent;
+    color: #e8e8e8;
+    margin-bottom: 20px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC4yNzI3IDEwTDAuNSAxMEwwLjUgOEwxNC4yNzI1IDhMOC41MTM0NSAxLjcyNDk2TDkuODY1NzkgMC4yNTE0NjVMMTcuMjE4OSA4LjI2MzMzQzE3LjU5MjMgOC42NzAyMiAxNy41OTIzIDkuMzI5OTMgMTcuMjE4OSA5LjczNjgyTDkuODY1NzkgMTcuNzQ4N0w4LjUxMzQ1IDE2LjI3NTJMMTQuMjcyNyAxMFoiIGZpbGw9IiNFOEU4RTgiLz4KPC9zdmc+Cg==);
+}
+
+#login-button:hover {
+    background-color: #d13639;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC4yNzI3IDEwTDAuNSAxMFY4TDE0LjI3MjUgOEw4LjUxMzQ1IDEuNzI0OTZMOS44NjU3OSAwLjI1MTQ2NUwxNy4yMTg5IDguMjYzMzNDMTcuNTkyMyA4LjY3MDIyIDE3LjU5MjMgOS4zMjk5MyAxNy4yMTg5IDkuNzM2ODJMOS44NjU3OSAxNy43NDg3TDguNTEzNDUgMTYuMjc1MkwxNC4yNzI3IDEwWiIgZmlsbD0iI0Y5RjlGOSIvPgo8L3N2Zz4K);
+}
+
+/* -- LINKS -- */
+
+#login-links {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+}
+
+#login-links>a:hover {
+    color: black;
+}
+
+#login-links>a {
+    padding-bottom: 5px;
+    font-family: 'lol1';
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 110%;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+    color: #b3b3b3;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 0.7rem;
+}
+
+/* INPUTS*/
+
+#login-head {
+    font-family: 'lol1';
+    font-size: 1.4em;
+}
+
+#login-div {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 350px;
+    height: 500px;
+    background-color: whitesmoke;
+    border-radius: 3px;
+    text-align: center;
+    padding-top: 60px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 0px;
+    margin-top: 100px;
+}
+
+#login-user-div, #login-passw-div {
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    border-radius: 5px;
+    background-color: lightslategrey;
+    text-align: left;
+}
+
+#login-user-div>label {
+    padding-left: 5px;
+    width: 100%;
+}
+
+#login-user:focus #login-user-div {
+    border: black 1px solid;
+}
+
+#login-user, #login-passw {
+    padding-left: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    background: transparent;
+    line-height: 1.5em;
+    width: 100%;
+    outline: none;
+    border: 2px transparent;
+    display: block;
+    color: transparent;
+    padding-right: 2.5em;
+}
+
+#login-user:valid {
+    color: black;
+}
+
+/*#login-user{
+    -webkit-font-smoothing: antialiased;
+    -webkit-box-direction: normal;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    background: transparent;
+    line-height: 1.5em;
+    width: 100%;
+    outline: none;
+    border: 2px transparent;
+    padding: 1.8625em 1.496333981744725rem 0.9625em;
+    min-height: 4.325em;
+    display: block;
+    color: transparent;
+    padding-right: 2.5em;
+}*/
