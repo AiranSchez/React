@@ -38,6 +38,19 @@ body {
 
     
     [class^="personaje"] div {
+      div{
+        display: flex;
+        flex-direction: column;
+        border: none;
+        
+        #title{
+          font-size: 15px;
+          align-self: flex-start;
+        }
+        #name{
+          align-self: flex-start;
+        }
+      }
       @include flex();
       @include borders();
       width: 250px;
@@ -46,7 +59,7 @@ body {
       }
       margin-bottom: 10px;
       background-color: rgb(9, 20, 26);
-      padding: 20px;
+      
       color: white
     }
     .personaje1 {
