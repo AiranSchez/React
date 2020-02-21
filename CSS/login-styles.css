@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url("../img/login-back.jpg");
+    background-image: url("../images/login-back.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0px;
@@ -117,6 +117,7 @@ footer {
     background-color: transparent;
     color: rgba(124, 122, 122, 0.822);
     margin-bottom: 20px;
+    background-color: #c99192;
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC4yNzI3IDEwTDAuNSAxMEwwLjUgOEwxNC4yNzI1IDhMOC41MTM0NSAxLjcyNDk2TDkuODY1NzkgMC4yNTE0NjVMMTcuMjE4OSA4LjI2MzMzQzE3LjU5MjMgOC42NzAyMiAxNy41OTIzIDkuMzI5OTMgMTcuMjE4OSA5LjczNjgyTDkuODY1NzkgMTcuNzQ4N0w4LjUxMzQ1IDE2LjI3NTJMMTQuMjcyNyAxMFoiIGZpbGw9IiNFOEU4RTgiLz4KPC9zdmc+Cg==);
 }
 
@@ -185,7 +186,7 @@ footer {
     flex-direction: column;
     margin: 50px;
     border-radius: 5px;
-    background-color: rgba(124, 122, 122, 0.822);
+    background-color: rgba(145, 143, 143, 0.822);
     text-align: left;
 }
 
@@ -199,7 +200,7 @@ footer {
 }
 
 .login-items{
-    color: rgba(249, 249, 249, 0.65);
+    color: rgb(80, 80, 80);
 }
 
 #login-user, #login-passw {
