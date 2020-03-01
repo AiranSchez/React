@@ -26,17 +26,22 @@
                 <label id="login-head">Iniciar sesión</label>
 
                 <div id="login-user-div">
-                    <label  class="login-items" for="login-user">Usuario</label>
-                    <input id="login-user" type="text" maxlength="15" />
+                    <label class="login-items" for="login-user">Usuario</label>
+                    <input id="login-user" type="text" maxlength="30" />
                 </div>
 
                 <div id="login-passw-div">
                     <label class="login-items" for="login-passw">Contraseña</label>
-                    <input id="login-passw" type="password" maxlength="15"/>
+                    <input id="login-passw" type="password" maxlength="30" autocomplete="on" />
                 </div>
 
                 <div id="login-button-div">
-                    <button id="login-button"></button>
+                    <button id="login-button" onclick="logInEmail()"></button>
+                </div>
+
+                <div id="login-button-gluglu-div">
+                    <button id="gluglu" onclick="glugluLogin()">Iniciar con Google</button>
+                    <button id="gluglu2" onclick="logOut()">Salir</button>
                 </div>
 
                 <div id="login-links" data-testid="panel-links">
@@ -49,10 +54,6 @@
         </div>
 
     </main>
-
-
-
-
 
     <footer>
 
@@ -82,7 +83,32 @@
             <p class="copyright">© 2020 Riot Games. All rights reserved</p>
         </div>
     </footer>
+    
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
+    
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBR31CiHF5m-tXXEi2McsmV6ULgknZXlcI",
+            authDomain: "lolreact.firebaseapp.com",
+            databaseURL: "https://lolreact.firebaseio.com",
+            projectId: "lolreact",
+            storageBucket: "lolreact.appspot.com",
+            messagingSenderId: "258956426266",
+            appId: "1:258956426266:web:a64ffb26f9bfe2fa1865a3"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="../JS/login.js"></script>
 
 </body>
 

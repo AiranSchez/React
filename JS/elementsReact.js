@@ -32,6 +32,7 @@ function elegir(elegidos, nombres) {
     }
   }
 }
+
 function Campeon(props) {
 
   let img = "http://ddragon.leagueoflegends.com/cdn/10.4.1/img/champion/" + datos.data[props.name].image.full;
