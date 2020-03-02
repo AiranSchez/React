@@ -21,6 +21,13 @@ when_external_loaded(function () {
     ReactDOM.render(<Campeon name={elegidosIzquierda[i]} />, document.getElementById(idizquierda));
     ReactDOM.render(<Campeon name={elegidosDerecha[i]} />, document.getElementById(idderecha));
   }
+  //
+  //Modificación para intentar poner todos los personajes en el centro
+  for (let j = 0; j < array.length; j++) {
+    
+    
+  }
+  //
 
 });
 
@@ -39,8 +46,8 @@ function Campeon(props) {
   console.log(datos.data[props.name])
   return (
     <div>
-      <img src={img} />
-      <div>
+      <img src={img} width="100"/>
+      <div className="descripcion">
         <p id="name">{datos.data[props.name].name}</p>
         <p id="title">{datos.data[props.name].title}</p>
       </div>

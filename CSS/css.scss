@@ -17,7 +17,8 @@
 }
 body {
   background-image: url("../images/nashor.jpg");
-  background-size: cover;
+  
+  background-repeat: no-repeat;
 }
 .container {
   margin-left: 150px;
@@ -38,6 +39,11 @@ body {
 
     
     [class^="personaje"] div {
+      
+      .descripcion{
+        width: 200px;
+        padding-left: 20px;
+      }
       div{
         display: flex;
         flex-direction: column;
@@ -53,10 +59,8 @@ body {
       }
       @include flex();
       @include borders();
-      width: 250px;
-      img {
-        @include tamanio();
-      }
+      width: 300px;
+      
       margin-bottom: 10px;
       background-color: rgb(9, 20, 26);
       
