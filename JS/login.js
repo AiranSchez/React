@@ -1,5 +1,48 @@
 
 
+function registroUsuario() {
+
+    $('.botonesIncio').hide();
+    $('#login-head').html('Registrar usuario');
+    $('#login-head').addClass('register');
+    $('#login-button').attr('onclick', 'createUserWithEmailAndPassWord()');
+
+}
+
+function createUserWithEmailAndPassWord(email, password) {
+
+
+    var email = document.getElementById("login-user").value;
+    var password = document.getElementById("login-passw").value;
+
+    console.log( email + " / " + password );
+
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+
+        .then(function (result) {
+            
+            resetToLogin();
+
+        }).catch(function (error) {
+
+            $('#label-info').html("Usuario o contraseña incorrectos");
+            $('#label-info').show();
+
+        });
+
+
+}
+
+function resetToLogin() {
+
+    $('.botonesIncio').show();
+    $('#login-head').html('Iniciar Sesión');
+    $('#login-head').removeClass('register');
+    $('#login-button').attr('onclick', 'logInEmail()');
+
+}
+
+
 function glugluLogin() {
 
     var provider = new firebase.auth.GoogleAuthProvider();

@@ -23,7 +23,7 @@
 
             <div id="login-form">
 
-                <label id="login-head">Iniciar sesión</label>
+                <label id="login-head">Iniciar Sesión</label>
 
                 <div id="login-user-div">
                     <label class="login-items" for="login-user">Usuario</label>
@@ -45,21 +45,26 @@
                     <input id="login-numeroconf" type="text" maxlength="30" autocomplete="on" />
                 </div>
 
+                <div id="label-info-div">
+                    <label id="label-info" style="display: none; color: rgb(194, 63, 63);">INFO</label>
+                </div>
+                
+
                 <div id="login-button-div">
                     <button id="login-button" onclick="logInEmail()"></button>
                 </div>
 
 
                 <div id="login-button-gluglu-div">
-                    <button id="glugluinit" onclick="glugluLogin()">Iniciar con Google</button>
-                    <button id="githubinit" onclick="loginGitHub()">Iniciar con GitHub</button>
-                    <button id="twitterinit" onclick="logTwitter()">Iniciar con Twitter</button>
-                    <button id="movilinit" class="default" onclick="logMovil()">Iniciar con Móvil</button>
+                    <button id="glugluinit" class="botonesIncio" onclick="glugluLogin()">Iniciar con Google</button>
+                    <button id="githubinit" class="botonesIncio" onclick="loginGitHub()">Iniciar con GitHub</button>
+                    <button id="twitterinit" class="botonesIncio"  onclick="logTwitter()">Iniciar con Twitter</button>
+                    <button id="movilinit"  class="default botonesIncio" onclick="logMovil()">Iniciar con Móvil</button>
                 </div>
 
                 <div id="login-links" data-testid="panel-links">
                     <a href="#" data-testid="cant-sign-in">¿NO PUEDES INICIAR SESIÓN?</a>
-                    <a href="#" data-testid="signup-external-link">CREAR UNA CUENTA</a>
+                    <a href="#" data-testid="signup-external-link" onclick="registroUsuario()">CREAR UNA CUENTA</a>
                 </div>
 
             </div>
