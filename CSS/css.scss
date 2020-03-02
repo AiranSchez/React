@@ -151,16 +151,18 @@ body {
   }
   .BansIzquierda {
     grid-area: 6 / 1 / 7 / 2;
-    background-color: black;
+    
   }
   .Chat {
     grid-area: 6 / 2 / 7 / 3;
-    background-color: blue;
+    text-align: center;
     color:white;
-    height:180px;
+    background-color: #11232f;
+    @include borders();
+    
   }
   .BansDerecha {
     grid-area: 6 / 3 / 7 / 4;
-    background-color: black;
+    
   }
 }

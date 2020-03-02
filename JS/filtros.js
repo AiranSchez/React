@@ -22,9 +22,9 @@ filtro.addEventListener('keyup', function () {
 
 var tipos = document.getElementById('roles').children
 for (let j = 0; j < tipos.length; j++) {
-    console.log(tipos[j])
+    
     tipos[j].addEventListener('click', function () {
-        console.log(tipos[j].id)
+        
         var campeones = document.getElementsByClassName("Campeones")[0].children
         for (let i = 0; i < campeones.length; i++) {
             let nombrecampeon = campeones[i].firstElementChild.className
