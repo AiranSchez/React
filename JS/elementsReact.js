@@ -1,3 +1,5 @@
+let nombres=[];
+
 function when_external_loaded(callback) {
   if (typeof datos === 'undefined') {
     setTimeout(function () {
@@ -5,6 +7,8 @@ function when_external_loaded(callback) {
     }, 100); // wait 100 ms
   } else { callback(); }
 }
+
+
 
 when_external_loaded(function () {
   let nombres = [];
@@ -23,6 +27,9 @@ when_external_loaded(function () {
     document.getElementById('campeones').append(elemento);
     
     ReactDOM.render(<CampeonImagen name={nombres[i]}/>, document.getElementById(i));
+    document.getElementById(i).addEventListener('click',function(){
+      mostrar(datos.data[nombres[i]].name);
+    });  
     let idizquierda = 'izquierda' + (i + 1);
     let idderecha = 'derecha' + (i + 1);
     if (i < 5) {
@@ -32,8 +39,23 @@ when_external_loaded(function () {
     }
 
   }
-
 });
+function mostrar(i){
+  let elemento=document.getElementById('chat');
+        elemento.innerHTML=`
+        <p>${datos.data[i].name}, ${datos.data[i].title}</p>
+        <p>${datos.data[i].blurb}</p>
+        Ataque: ${datos.data[i].info.attack}
+        Defensa: ${datos.data[i].info.defense}
+        Dificultad: ${datos.data[i].info.difficulty}
+        Magia: ${datos.data[i].info.magic}
+        
+        `;
+      
+}
+
+
+
 
 function elegir(elegidos, nombres) {
   while (elegidos.length < 5) {
@@ -46,7 +68,7 @@ function elegir(elegidos, nombres) {
 function Campeon(props) {
 
   let img = "http://ddragon.leagueoflegends.com/cdn/10.4.1/img/champion/" + datos.data[props.name].image.full;
-  console.log(datos.data)
+  
   return (
     <div >
       <img src={img} />
