@@ -88,7 +88,8 @@ body {
   }
   .Buscador {
     grid-area: 1 / 2 / 2 / 3;
-
+    @include borders();
+    background-color: #11232f;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -111,7 +112,7 @@ body {
   }
   .Campeones {
     grid-area: 2 / 2 / 6 / 3;
-    background-color: rgb(17, 35, 47);
+    background-color: #11232f;
     @include borders();
     display: inline-flex;
     flex-wrap: wrap;

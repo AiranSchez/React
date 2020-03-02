@@ -37,6 +37,6 @@ for (let j = 0; j < tipos.length; j++) {
                
             }
         }
-        document.get
+        
     })
 }
