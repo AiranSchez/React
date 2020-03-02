@@ -100,7 +100,7 @@ footer {
 
 /* -- BOTON -- */
 
-#gluglu, #gluglu2{
+#glugluinit, #githubinit, #twitterinit, #movilinit{
     text-align: center;
     outline: none;
     cursor: pointer;
@@ -196,7 +196,7 @@ footer {
     border:  1px solid black;
 }
 
-#login-user-div, #login-passw-div {
+#login-user-div, #login-passw-div, #login-number-div, #login-numberconf-div {
     padding: 4px;
     display: flex;
     flex-direction: column;
@@ -206,12 +206,12 @@ footer {
     text-align: left;
 }
 
-#login-user-div>label , #login-passw-div > label {
+#login-user-div>label , #login-passw-div > label, #login-number-div > label, #login-numberconf-div > label {
     padding-left: 5px;
     width: 100%;
 }
 
-#login-user:focus #login-user-div {
+#login-user:focus #login-user-div, #login-numeroconf {
     border: black 1px solid;
 }
 
@@ -219,7 +219,7 @@ footer {
     color: rgb(80, 80, 80);
 }
 
-#login-user, #login-passw {
+#login-user, #login-passw, #login-numero, #login-numeroconf {
     padding-left: 5px;
     box-sizing: border-box;
     font-size: 1rem;
@@ -235,7 +235,7 @@ footer {
     padding-right: 2.5em;
 }
 
-#login-user:valid, #login-passw:valid {
+#login-user:valid, #login-passw:valid, #login-numero:valid, #login-numeroconf:valid {
     color: black;
     font-family: 'lol1';
 }

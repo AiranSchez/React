@@ -21,7 +21,7 @@
 
         <div id="login-div">
 
-            <form id="login-form">
+            <div id="login-form">
 
                 <label id="login-head">Iniciar sesión</label>
 
@@ -35,21 +35,34 @@
                     <input id="login-passw" type="password" maxlength="30" autocomplete="on" />
                 </div>
 
+                <div id="login-number-div" style="display: none;">
+                    <label class="login-items" for="login-numero">Numero</label>
+                    <input id="login-numero" type="text" maxlength="30" autocomplete="on" />
+                </div>
+
+                <div id="login-numberconf-div" style="display: none;">
+                    <label class="login-items" for="login-numero">Código de confirmación</label>
+                    <input id="login-numeroconf" type="text" maxlength="30" autocomplete="on" />
+                </div>
+
                 <div id="login-button-div">
                     <button id="login-button" onclick="logInEmail()"></button>
                 </div>
 
+
                 <div id="login-button-gluglu-div">
-                    <button id="gluglu" onclick="glugluLogin()">Iniciar con Google</button>
-                    <button id="gluglu2" onclick="logOut()">Salir</button>
+                    <button id="glugluinit" onclick="glugluLogin()">Iniciar con Google</button>
+                    <button id="githubinit" onclick="loginGitHub()">Iniciar con GitHub</button>
+                    <button id="twitterinit" onclick="logTwitter()">Iniciar con Twitter</button>
+                    <button id="movilinit" class="default" onclick="logMovil()">Iniciar con Móvil</button>
                 </div>
 
                 <div id="login-links" data-testid="panel-links">
                     <a href="#" data-testid="cant-sign-in">¿NO PUEDES INICIAR SESIÓN?</a>
-                    <a href="#" data-testid="signup-external-link">¿CREAR UNA CUENTA?</a>
+                    <a href="#" data-testid="signup-external-link">CREAR UNA CUENTA</a>
                 </div>
 
-            </form>
+            </div>
 
         </div>
 
