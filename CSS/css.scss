@@ -17,7 +17,7 @@
 }
 body {
   background-image: url("../images/nashor.jpg");
-  
+
   background-repeat: no-repeat;
 }
 .container {
@@ -37,34 +37,32 @@ body {
     display: flex;
     flex-direction: column;
 
-    
     [class^="personaje"] div {
-      
-      .descripcion{
+      .descripcion {
         width: 200px;
         padding-left: 20px;
       }
-      div{
+      div {
         display: flex;
         flex-direction: column;
         border: none;
-        
-        #title{
+
+        #title {
           font-size: 15px;
           align-self: flex-start;
         }
-        #name{
+        #name {
           align-self: flex-start;
         }
       }
       @include flex();
       @include borders();
       width: 300px;
-      
+
       margin-bottom: 10px;
       background-color: rgb(9, 20, 26);
-      
-      color: white
+
+      color: white;
     }
     .personaje1 {
       grid-area: 1 / 1 / 2 / 2;
@@ -90,7 +88,7 @@ body {
   }
   .Buscador {
     grid-area: 1 / 2 / 2 / 3;
-  
+
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -100,6 +98,9 @@ body {
       border: none;
       color: white;
       height: 35px;
+    }
+    #busca {
+      display: flex;
     }
     div {
       img {
@@ -112,6 +113,40 @@ body {
     grid-area: 2 / 2 / 6 / 3;
     background-color: rgb(17, 35, 47);
     @include borders();
+    display: inline-flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    height: 530px;
+    margin: 3px;
+    justify-content: center;
+    
+    
+    div {
+      margin: 2px;
+    }
+
+    // 
+    
+&::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: rgb(5, 17, 24);
+}
+
+&::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: rgb(5, 17, 24);
+}
+
+&::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgb(15, 72, 89);
+}
+    //
   }
   .BansIzquierda {
     grid-area: 6 / 1 / 7 / 2;

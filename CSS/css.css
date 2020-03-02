@@ -184,6 +184,12 @@ body {
   height: 35px;
 }
 
+.container .Buscador #busca {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .container .Buscador div img {
   width: 30px;
   height: 30px;
@@ -201,6 +207,38 @@ body {
   background-position: fixed;
   background-repeat: no-repeat;
   background-size: contain;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: scroll;
+  height: 530px;
+  margin: 3px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .Campeones div {
+  margin: 2px;
+}
+
+.container .Campeones::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #051118;
+}
+
+.container .Campeones::-webkit-scrollbar {
+  width: 12px;
+  background-color: #051118;
+}
+
+.container .Campeones::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #0f4859;
 }
 
 .container .BansIzquierda {
