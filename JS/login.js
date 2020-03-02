@@ -8,7 +8,7 @@ function glugluLogin() {
         .then(function (result) {
 
             console.log(result.user.email + ' ${result.user.email} ha iniciado sesión');
-            location.href = "../index.html";
+            location.href = "./HTML/champs.html";
 
         }).catch(function (error) {
             console.log(error.code + " / " + error.message + 'Error ${error.code}: ${error.message}');
@@ -26,7 +26,7 @@ function logTwitter() {
     });
 
     firebase.auth().signInWithPopup(provider).then(function (result) {
-        window.location.href = "../index.html";
+        location.href = "./HTML/champs.html";
     }).catch(function (error) {
 
     });
@@ -43,7 +43,7 @@ function logInEmail() {
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then(function (result) {
 
-            window.location.href = "../index.html";
+            location.href = "./HTML/champs.html";
             console.log(email + " / " + password);
         }).catch(function (error) {
 
@@ -60,7 +60,7 @@ function loginGitHub() {
     provider.addScope('repo');
 
     firebase.auth().signInWithPopup(provider).then(function (result) {
-        location.href = "../index.html";
+        location.href = "./HTML/champs.html";
     }).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -112,7 +112,7 @@ function checkPhoneCode() {
     confirmationResult.confirm(code).then(function (result) {
 
         console.log(result);
-        location.href = "../index.html";
+        location.href = "./HTML/champs.html";
 
     }).catch(function (error) {
 

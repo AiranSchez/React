@@ -18,4 +18,14 @@ function procesarEventos() {
 
 }
 
+function logOut() {
+    firebase.auth().signOut().then(function () {
+        console.log("Sesión cerrada correctamente");
+        document.location.href = "../index.html";
+    }).catch(function (error) {
+        console.log("Error al cerrar sesión");
+    });
+    
+}
+
 

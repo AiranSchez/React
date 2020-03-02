@@ -95,6 +95,8 @@
 
             <p class="copyright">© 2020 Riot Games. All rights reserved</p>
         </div>
+
+        <div id="captcha"></div>
     </footer>
 
 

@@ -4,78 +4,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./CSS/css.css">
-    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
-    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lol Login</title>
+    <link rel="stylesheet" href="./CSS/login-styles.css">
 </head>
 
 <body>
 
-    <div id="div-cerrar">  
-        <button id="cerrar" onclick="logOut()">Cerrar Sesión</button> 
-    </div>
+    <header>
+        <div id="riot-logo">
+            <img id="riot-logo-img" src="./svg/riotlogo.svg">
+        </div>
+    </header>
 
-    <div class="container">
-        <div class="PersonajesIzquierda">
-            <div class="personaje1" id='izquierda1'>
-                
-            </div>
-            <div class="personaje2" id='izquierda2'> 
-                
-            </div>
-            <div class="personaje3" id='izquierda3'> 
-                
-            </div>
-            <div class="personaje4" id='izquierda4'> 
-                
-            </div>
-            <div class="personaje5" id='izquierda5'> 
-                
-            </div>
-        </div>
-        <div class="PersonajesDerecha">
-            <div class="personaje6" id='derecha1'>
-                
-            </div>
-            <div class="personaje7" id='derecha2'> 
-                
-            </div>
-            <div class="personaje8" id='derecha3'> 
-                
-            </div>
-            <div class="personaje9" id='derecha4'> 
-                
-            </div>
-            <div class="personaje10" id='derecha5'> 
-                
-            </div>
-        </div>
-        <div class="Buscador">
-            <div id="roles">
-                <img id="Support" src="./images/Controller_icon.png">
-                <img id="Fighter" src="./images/Fighter_icon.png">
-                <img id="Mage" src="./images/Mage_icon.png">
-                <img id="Marksman" src="./images/Marksman_icon.png">
-                <img id="Assassin" src="./images/Slayer_icon.png">
-                <img id="Tank" src="./images/Tank_icon.png">
-            </div>
-            <div id="busca">
-                <input type="text" id="TextoABuscar"> <img src="./images/lupa.png" id="lupa"> </input>
-                
+    <main>
+
+        <div id="login-div">
+
+            <div id="login-form">
+
+                <label id="login-head">Iniciar sesión</label>
+
+                <div id="login-user-div">
+                    <label class="login-items" for="login-user">Usuario</label>
+                    <input id="login-user" type="text" maxlength="30" />
+                </div>
+
+                <div id="login-passw-div">
+                    <label class="login-items" for="login-passw">Contraseña</label>
+                    <input id="login-passw" type="password" maxlength="30" autocomplete="on" />
+                </div>
+
+                <div id="login-number-div" style="display: none;">
+                    <label class="login-items" for="login-numero">Numero</label>
+                    <input id="login-numero" type="text" maxlength="30" autocomplete="on" />
+                </div>
+
+                <div id="login-numberconf-div" style="display: none;">
+                    <label class="login-items" for="login-numero">Código de confirmación</label>
+                    <input id="login-numeroconf" type="text" maxlength="30" autocomplete="on" />
+                </div>
+
+                <div id="login-button-div">
+                    <button id="login-button" onclick="logInEmail()"></button>
+                </div>
+
+
+                <div id="login-button-gluglu-div">
+                    <button id="glugluinit" onclick="glugluLogin()">Iniciar con Google</button>
+                    <button id="githubinit" onclick="loginGitHub()">Iniciar con GitHub</button>
+                    <button id="twitterinit" onclick="logTwitter()">Iniciar con Twitter</button>
+                    <button id="movilinit" class="default" onclick="logMovil()">Iniciar con Móvil</button>
+                </div>
+
+                <div id="login-links" data-testid="panel-links">
+                    <a href="#" data-testid="cant-sign-in">¿NO PUEDES INICIAR SESIÓN?</a>
+                    <a href="#" data-testid="signup-external-link">CREAR UNA CUENTA</a>
+                </div>
+
             </div>
 
         </div>
-        <div class="Campeones" id="campeones"> </div>
-        <div class="BansIzquierda"> </div>
-        <div class="Chat"> </div>
-        <div class="BansDerecha"> </div>
-    </div>
-    <script src="./js/conexion.js"></script>
-    <script type="text/babel" src="./js/elementsReact.js"></script>
-    <script src="./js/filtros.js"></script>
-    
+
+    </main>
+
+    <footer>
+
+        <div id="footer-div">
+
+
+            <nav class="footer-menu-links text__web-link">
+
+                <span>
+                    <a href="https://support.riotgames.com/hc/en-us" class="footer-link" target="_blank"
+                        rel="noopener noreferrer">Support</a>
+                    <span class="footer-dot">•</span>
+                </span>
+
+                <span>
+                    <a href="https://www.riotgames.com/en/privacy-notice" class="footer-link" target="_blank"
+                        rel="noopener noreferrer">Privacy Policy</a>
+                    <span class="footer-dot">•</span>
+                </span>
+
+                <span>
+                    <a href="https://www.riotgames.com/en/terms-of-service" class="footer-link" target="_blank"
+                        rel="noopener noreferrer">Terms of Use</a>
+                </span>
+            </nav>
+
+            <p class="copyright">© 2020 Riot Games. All rights reserved</p>
+        </div>
+
+        <div id="captcha"></div>
+    </footer>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBR31CiHF5m-tXXEi2McsmV6ULgknZXlcI",
+            authDomain: "lolreact.firebaseapp.com",
+            databaseURL: "https://lolreact.firebaseio.com",
+            projectId: "lolreact",
+            storageBucket: "lolreact.appspot.com",
+            messagingSenderId: "258956426266",
+            appId: "1:258956426266:web:a64ffb26f9bfe2fa1865a3"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- libreries -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="./JS/login.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/css.css">
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+</head>
+
+<body>
+
+    <div id="div-cerrar">  
+        <button id="cerrar" onclick="logOut()">Cerrar Sesión</button> 
+    </div>
+
+    <div class="container">
+        <div class="PersonajesIzquierda">
+            <div class="personaje1" id='izquierda1'>
+                
+            </div>
+            <div class="personaje2" id='izquierda2'> 
+                
+            </div>
+            <div class="personaje3" id='izquierda3'> 
+                
+            </div>
+            <div class="personaje4" id='izquierda4'> 
+                
+            </div>
+            <div class="personaje5" id='izquierda5'> 
+                
+            </div>
+        </div>
+        <div class="PersonajesDerecha">
+            <div class="personaje6" id='derecha1'>
+                
+            </div>
+            <div class="personaje7" id='derecha2'> 
+                
+            </div>
+            <div class="personaje8" id='derecha3'> 
+                
+            </div>
+            <div class="personaje9" id='derecha4'> 
+                
+            </div>
+            <div class="personaje10" id='derecha5'> 
+                
+            </div>
+        </div>
+        <div class="Buscador">
+            <div id="roles">
+                <img id="Support" src="./images/Controller_icon.png">
+                <img id="Fighter" src="./images/Fighter_icon.png">
+                <img id="Mage" src="./images/Mage_icon.png">
+                <img id="Marksman" src="./images/Marksman_icon.png">
+                <img id="Assassin" src="./images/Slayer_icon.png">
+                <img id="Tank" src="./images/Tank_icon.png">
+            </div>
+            <div id="busca">
+                <input type="text" id="TextoABuscar"> <img src="./images/lupa.png" id="lupa"> </input>
+                
+            </div>
+
+        </div>
+        <div class="Campeones" id="campeones"> </div>
+        <div class="BansIzquierda"> </div>
+        <div class="Chat"> </div>
+        <div class="BansDerecha"> </div>
+    </div>
+    
+    <script src="./js/conexion.js"></script>
+    <script type="text/babel" src="./js/elementsReact.js"></script>
+    <script src="./js/filtros.js"></script>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-auth.js"></script>
+    
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBR31CiHF5m-tXXEi2McsmV6ULgknZXlcI",
+            authDomain: "lolreact.firebaseapp.com",
+            databaseURL: "https://lolreact.firebaseio.com",
+            projectId: "lolreact",
+            storageBucket: "lolreact.appspot.com",
+            messagingSenderId: "258956426266",
+            appId: "1:258956426266:web:a64ffb26f9bfe2fa1865a3"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+</body>
+
+</html>
