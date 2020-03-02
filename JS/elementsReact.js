@@ -64,7 +64,7 @@ function CampeonImagen(props) {
   let img = "http://ddragon.leagueoflegends.com/cdn/10.4.1/img/champion/" + datos.data[props.name].image.full;
   
   return (
-    <div className={datos.data[props.name].name} >
+    <div className={[datos.data[props.name].name , datos.data[props.name].tags[0] , datos.data[props.name].tags[1]]} >
       <img src={img} width='100' />
     </div>
     
